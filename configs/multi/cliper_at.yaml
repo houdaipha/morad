@@ -1,0 +1,53 @@
+data:
+  path: /morad_dir/Datasets/EMAD/
+  annotation_file: morad.csv
+  text:
+    add_special_tokens: false
+model:
+  whisper:
+    freeze: true
+    pretrained_weights: /morad_dir/modelsWeights/whisper_large.pt
+    proj_dropout: 0.1
+    transformer_head:
+      frames: 1500
+      width: 192
+      layers: 12
+      heads: 3
+      attn_dropout: 0.
+      mlp_dropout: 0.
+      out_features: 96
+      dropout: 0.
+      out_pool: none
+  bert:
+    freeze: true
+    model_name: UBC-NLP/MARBERTv2
+    proj_dropout: 0.1
+    transformer_head:
+      frames: 32
+      width: 192
+      layers: 12
+      heads: 3
+      attn_dropout: 0.
+      mlp_dropout: 0.
+      out_features: 96
+      dropout: 0.
+      out_pool: none
+  temporal_head:
+    frames: 64
+    width: 192
+    layers: 12
+    heads: 3
+    attn_dropout: 0.
+    mlp_dropout: 0.
+    out_features: 4
+    dropout: 0.
+    out_pool: avg
+  out_features: 4
+train:
+  epochs: 100
+  lr: 5.e-4
+  batch_size: 128
+  num_workers: 4
+  checkpoint_interval: 101
+  log_dir: /morad_dir/weights/MORAD/TEST/cliper_at
+  seed: 42

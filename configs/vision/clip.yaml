@@ -1,0 +1,29 @@
+data:
+  path: /morad_dir/Datasets/EMAD/
+  annotation_file: morad.csv
+  frames: 16
+  normalize:
+    mean: [0.48145466, 0.4578275, 0.40821073]
+    std: [0.26862954, 0.26130258, 0.27577711]
+model:
+  freeze: True
+  pretrained_weights: /morad_dir/modelsWeights/clip_vit_b_16.pt
+  proj_dropout: 0.1
+  transformer_head:
+    frames: 16
+    width: 128
+    layers: 4
+    heads: 2
+    attn_dropout: 0.
+    mlp_dropout: 0.
+    out_features: 4
+    dropout: 0.
+    out_pool: avg
+train:
+  epochs: 100
+  lr: 5.e-4
+  batch_size: 128
+  num_workers: 2
+  checkpoint_interval: 101
+  log_dir: /morad_dir/weights/MORAD/TEST/clip
+  seed: 42

@@ -1,0 +1,18 @@
+data:
+  path: /morad_dir/Datasets/EMAD/
+  annotation_file: morad.csv
+  frames: 16
+  normalize:
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+model:
+  out_features: 4
+  pretrained_weights: kinetics400_imagenet22k
+train:
+  epochs: 100
+  lr: 1.e-6
+  batch_size: 16
+  num_workers: 2
+  checkpoint_interval: 101
+  log_dir: /morad_dir/weights/MORAD/TEST/videoswin
+  seed: 42

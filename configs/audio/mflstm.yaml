@@ -1,0 +1,21 @@
+data:
+  path: /morad_dir/Datasets/EMAD/
+  annotation_file: morad.csv
+  mfcc_config:
+    deltas: False
+model:
+  input_size: 13 # n_mfcc * 3 if deltas else n_mfcc
+  hidden_size: 512
+  bidirectional: True
+  num_layers: 2
+  dropout: 0.1
+  head_dropout: 0.1
+  out_features: 4
+train:
+  epochs: 100
+  lr: 5.e-3
+  batch_size: 128
+  num_workers: 2
+  checkpoint_interval: 101
+  log_dir: /morad_dir/weights/MORAD/TEST/mflstm
+  seed: 42

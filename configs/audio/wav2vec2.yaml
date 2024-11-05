@@ -1,0 +1,26 @@
+data:
+  path: /morad_dir/Datasets/EMAD/
+  annotation_file: morad.csv
+model:
+  freeze: true
+  pretrained_weights: /morad_dir/modelsWeights/wav2vec2-xls-r-2b-pre.pt
+  proj_dropout: 0.1
+  transformer_head:
+    frames: 251
+    width: 768
+    layers: 12
+    heads: 12
+    attn_dropout: 0.1
+    mlp_dropout: 0.1
+    out_features: 4
+    dropout: 0.1
+    out_pool: avg
+train:
+  epochs: 100
+  lr: 3.e-6
+  batch_size: 128
+  pin_memory: False
+  num_workers: 2
+  checkpoint_interval: 101
+  log_dir: /morad_dir/weights/MORAD/TEST/wav2vec2
+  seed: 42
