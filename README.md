@@ -32,24 +32,24 @@ We benchmarked several emotion recognition methodologies on the MORAD dataset, c
 | [MS-CNN](./models/audio/mscnn.py)         | 46.75     | 52.14 |
 | [Wav2vec 2.0](./models/audio/wav2vec2.py) | 55.60     | 59.14 |
 | [Hubert](./models/audio/hubert.py)        | 57.12     | 62.30 |
-| [Whisper](./models/audio/whisper.py)      | **69.51** | **71.33** |
+| [Whisper](./models/audio/whisper.py)      | <u>**69.51**</u> | <u>**71.33**</u> |
 
 ### Visual Models
 | Model                                         | WF1   | Acc.  |
 |-----------------------------------------------|-------|-------|
 | [CNN-T](./models/vision/resnet.py)            | 45.09 | 53.50 |
 | [MAE-T](./models/vision/mae.py)               | 46.44 | 48.76 |
-| [CLIP-T](./models/vision/clip.py)             | 66.31 | **66.82** |
+| [CLIP-T](./models/vision/clip.py)             | 66.31 | <u>**66.82**</u> |
 | [VideoMAE](./models/vision/videomae.py)       | 53.76 | 53.72 |
 | [VideoSwin](./models/vision/videoswin.py)     | 58.99 | 59.37 |
-| [TimeSformer](./models/vision/timesformer.py) | **66.38** | 66.59 |
+| [TimeSformer](./models/vision/timesformer.py) | <u>**66.38**</u> | 66.59 |
 | [Vivit](./models/vision/vivit.py)             | 50.11 | 50.56 |
 
 
 ### Textual Models
 | Model                                            | WF1   | Acc.  |
 |--------------------------------------------------|-------|-------|
-| [MARBERTv2](./models/text/bert.py)               | **53.14** | **55.08** |
+| [MARBERTv2](./models/text/bert.py)               | <u>**53.14**</u> | <u>**55.08**</u> |
 | [CAMeLBERT-DA SA](./models/text/bert.py)         | 46.96 | 52.37 |
 | [XLM-RoBERTa](./models/text/bert.py)             | 42.50 | 48.08 |
 | [Dialectal Arabic XLM-R](./models/text/bert.py)  | 51.36 | 53.05 |
@@ -60,7 +60,7 @@ We benchmarked several emotion recognition methodologies on the MORAD dataset, c
 | [A+T](./models/multi/cliper_at.py)            | 66.76 | 68.40 |
 | [V+T](./models/multi/cliper_vt.py)            | 63.31 | 64.56 |
 | [A+V+T](./models/multi/cliper_avt.py)         | 69.43 | 70.65 |
-| [*CLIPER* (A+V)](./models/multi/cliper_av.py) | **73.11** | **73.36** |
+| [*CLIPER* (A+V)](./models/multi/cliper_av.py) | <u>**73.11**</u> | <u>**73.36**</u> |
 
 ## Environmet
 - **Python Version**: 3.11.
